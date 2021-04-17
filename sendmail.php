@@ -43,7 +43,7 @@
 //Email body
 	$mail->Body = "<h1>You joined IT Conference</h1></br><p>Thank you for applying to this year IT conference, see you!</p>";
 //Add recipient
-	$mail->addAddress('agumonxtra@gmail.com');
+	$mail->addAddress('supriatnaxv45@gmail.com');
 //Closing smtp connection
 	$mail->smtpClose();
 ?>
