@@ -3,7 +3,7 @@
     require_once 'includes/header.php';
     //require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
-    require_once 'sendmail.php';
+    require 'sendmail.php';
 
     if(isset($_POST['submit'])){
         $fname = $_POST['firstname'];
