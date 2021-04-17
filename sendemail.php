@@ -9,13 +9,7 @@
   #####################################*/
 
 //Include required PHPMailer files
-	require 'includes/PHPMailer.php';
-	require 'includes/SMTP.php';
-	require 'includes/Exception.php';
-//Define name spaces
-	use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\SMTP;
-	use PHPMailer\PHPMailer\Exception;
+	require_once 'PHPMailer/PHPMailerAutoload.php';
 //Create instance of PHPMailer
 	$mail = new PHPMailer();
 //Set mailer to use smtp
@@ -25,17 +19,17 @@
 //Enable smtp authentication
 	$mail->SMTPAuth = true;
 //Set smtp encryption type (ssl/tls)
-	$mail->SMTPSecure = "tls";
+	$mail->SMTPSecure = "ssl";
 //Port to connect smtp
-	$mail->Port = "587";
+	$mail->Port = "465";
 //Set gmail username
-	$mail->Username = "supriatnaxv45@gmail.com";
+	$mail->Username = "agumonxtra@gmail.com";
 //Set gmail password
-	$mail->Password = "netralizer35";
+	$mail->Password = "Supriatna1234";
 //Email subject
 	$mail->Subject = "Email Confirmation";
 //Set sender email
-	$mail->setFrom('supriatnaxv45@gmail.com');
+	$mail->setFrom('agumonxtra@gmail.com');
 //Enable HTML
 	$mail->isHTML(true);
 //Attachment
@@ -44,6 +38,8 @@
 	$mail->Body = "<h1>You joined IT Conference</h1></br><p>Thank you for applying to this year IT conference, see you!</p>";
 //Add recipient
 	$mail->addAddress('supriatnaxv45@gmail.com');
+//Sending email
+    $mail->Send();
 //Closing smtp connection
 	$mail->smtpClose();
 ?>
